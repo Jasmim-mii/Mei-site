@@ -54,7 +54,7 @@ export default {
 }
 
 .modal-container {
-  width: 70%;
+  width: 80%;
   height: 90vh;
   margin: 0px auto;
   padding: 20px 30px;
@@ -67,7 +67,6 @@ export default {
 }
 
 .modal-default-button {
-  float: right;
   margin-right: 2rem;
   color: #546e7a;
   font-size: 2rem;

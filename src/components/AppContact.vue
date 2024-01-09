@@ -58,7 +58,7 @@ export default {
             display: flex
             align-items: center
             justify-content: center
-            width: 30%
+            width: 100%
             height: 5rem
             border-radius: 0.5rem
             text-align: center

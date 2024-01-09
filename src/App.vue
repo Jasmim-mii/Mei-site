@@ -441,12 +441,14 @@ export default {
       @include grid($val: 15rem)
 
       .imgModal
-        width: 50%
+        width: 100%
 
 
         img
           width: 20rem
           height: 15rem
+          @media screen and (max-width:976px)
+            width: 90%
       .textModal
         .smallModal
           color: $color-brand-500
@@ -455,6 +457,8 @@ export default {
           font-weight: 600
         h3
           padding-bottom: 2rem
+        p
+          font-size: .9rem
     .descriptionModal
       display: grid
       grid-template-columns: 1fr 1fr
@@ -468,11 +472,10 @@ export default {
           height: 100%
     .prototypeModal
       margin: 5rem auto 0 auto
-      width: 90%
+      width: 95%
       img
         width: 100%
         height: 100%
-
 
 
 #step-by-step
@@ -520,18 +523,11 @@ export default {
 
 #contact
 
-  .contact-me
-    padding-top: 5rem
-    display: flex
-    justify-content: space-evenly
-    align-content: center
-    gap: 2rem
-
     .icon
       background: #eee
       padding: 2rem
       text-align: center
-      width: 10rem
+      width: 100%
       color: $color-brand-500
       font-size: 2.5rem
       box-shadow: 0rem 0rem 1rem rgb(0, 0 ,0, 0.1 )

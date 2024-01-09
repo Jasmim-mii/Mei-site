@@ -30,34 +30,32 @@ section
     justify-content: space-between
     background: $background-primary
     gap: 11rem
+    @media screen and (max-width:854px)
+      display: block
+      padding-bottom: 5rem
     #logo
+      width: 50%
 
-        h3
-            @include text-transform($transform: uppercase, $weight: 600, $size: .9rem)
-            padding-bottom: .7rem
-            span
-                color: #546E7A
+      h3
+          @include text-transform($transform: uppercase, $weight: 600, $size: .9rem)
+          padding-bottom: .7rem
+          span
+              color: #546E7A
 
-            a
-                color: $color-text-write-200
-                font-size: 1rem
-        .info-text
-            @include text-transform($transform: none, $weight: 500, $size: .8rem)
-            color: $color-text-write-500
+          a
+              color: $color-text-write-200
+              font-size: 1rem
+      .info-text
+          @include text-transform($transform: none, $weight: 500, $size: .8rem)
+          color: $color-text-write-500
 
     .terms
         color: $color-brand-200
+
         a
             color: $color-text-write-500
-    .footer-icon
-      display: grid
-      grid-template-columns: 1fr 1fr 1fr
-      gap: 1rem
-      color: $color-text-write-500
-      padding-top: .9rem
-      .icon-footer
-          font-size: 1.2rem
-          &:hover
-              color: $color-brand-200
+        @media screen and (max-width:854px)
+          h5
+            padding-top: 1rem
 </style>
 >
