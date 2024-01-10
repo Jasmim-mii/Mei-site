@@ -75,9 +75,12 @@ export default {
 
   #logo
     text-align: center
+    @media screen and (max-width:854px)
+      margin: 0 auto
     img
       height: 2.5rem
       width: 2.5rem
+
 
     h3
       text-transform: uppercase
