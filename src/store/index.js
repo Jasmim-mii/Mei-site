@@ -44,7 +44,7 @@ export default createStore({
         },
         {
           id: 3,
-          icon: "fa-pen-nib",
+          icon: "fa-pencil",
           multiploevento1: "",
           title: "Design de Interfaces (UI) ",
           text:
