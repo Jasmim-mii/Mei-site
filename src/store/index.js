@@ -52,57 +52,9 @@ export default createStore({
         },
 
       ],
-      work: [
-
+      work: [  
         {
           id: 1,
-          img: "work_register.png",
-          img2: "work_register.png",
-          img3: "work_register.png",
-          showCard: "",
-          description: "Projeto pessoal criado, criado com  objetivo de aprender a autenticar com javascript",
-          type: "Front-End",
-          title: "Tela de registro",
-          linguagem: {
-            2: "fluent:javascript-24-regular",
-            3: "ant-design:html5-filled",
-            4: "typcn:css3",
-          },
-          href: "https://validate-login-ten.vercel.app/"
-        },
-        {
-          id: 2,
-          img: "work_imc.png",
-          img2: "imc3.png",
-          img3: "imc3.png",
-          type: "Front-End",
-          showCard: "",
-          description: "Projeto simple, calcular o imc Neste projeto o foco foi a criação de html com javascript ",
-          title: "caluladora IMC",
-          linguagem: {
-            2: "fluent:javascript-24-regular",
-            3: "ant-design:html5-filled",
-            4: "typcn:css3",
-          },
-          href: "https://project-imc.vercel.app/"
-        },
-        {
-          id: 3,
-          img: "burger.png",
-          img2: "burger2.png",
-          img3: "burger3.png",
-          type: "Front-End",
-          showCard: "",
-          description: "Projeto catálogo com framework vue js, criado com foco na interação do front-end com o back-end e usando json-serve como database  ",
-          title: "Hamburguer",
-          linguagem: {
-            2: "fa-brands:vuejs",
-            3: "fa6-brands:sass",
-          },
-          href: "https://catalogo-burger.vercel.app/"
-        },
-        {
-          id: 4,
           img: "marketing.png",
           img2: "marketing2.png",
           img3: "marketing3.png",
@@ -117,7 +69,7 @@ export default createStore({
           href: "https://marketing-page-jasmim-mii.vercel.app/"
         },
         {
-          id: 5,
+          id: 2,
           img: "docevinho1.png",
           img2: "docevinho2.png",
           img3: "docevinho3.png",
@@ -129,18 +81,9 @@ export default createStore({
             1: "grommet-icons:figma",
           },
         },
-        // {
-        //   id: 6,
-        //   img: "",
-        //   showCard: "",
-        //   type: "UI Design",
-        //   title: "Page de captura",
-        //   linguagem: {
-        //     1: "grommet-icons:figma",
-        //   },
-        // },
+      
         {
-          id: 7,
+          id: 3,
           img: "dentalcare.png",
           img2: "dentalcare2.png",
           img3: "dentalcare3.png",
