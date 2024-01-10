@@ -110,7 +110,7 @@ export default {
         display: block
         border-radius: 3rem 3rem 0 0
         cursor: pointer
-        padding: .5rem 0
+        padding: 1rem 0
         background: rgba(220,220,220,0.8)
         backdrop-filter: blur(5px)
         opacity: 5
