@@ -72,15 +72,17 @@
     <div class="container-card">
       <app-card-slot class="cards-project" v-for="w in work" :key="w.id">
         <img class="img-fluid" :src="require(`@/assets/work/${w.img}`)" />
+
         <div class="content-project">
           <div class="description-project">
             <a @click="w.showCard = true"
               ><h4 class="link">{{ w.title }}</h4></a
             >
 
-            <a :href="w.href" target="_blank"
-              ><p class="link">{{ w.type }}</p></a
-            >
+            <p class="link">{{ w.type }}</p>
+            <a :href="w.href" target="_blank">
+              <small class="link">Visitar site</small>
+            </a>
           </div>
           <div class="lenguage-project">
             <div v-for="(i, index) in w.linguagem" :key="index">
@@ -385,7 +387,7 @@ export default {
           color: $color-text-black-200
 
 #project
-  position: relative
+
   .container-title
     width: 50%
     p
