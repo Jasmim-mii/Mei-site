@@ -62,7 +62,7 @@ export default {
     height: 100%
 
     .swiper-slide
-        margin: 5rem 2rem 0rem 2rem
+        margin: 2rem 2rem 0rem 2rem
 
     .swiper-slide img
         width: 100%

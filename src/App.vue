@@ -17,10 +17,10 @@
       <AppSwiperSlot />
     </div>
   </section>
+  <div class="skill-card">
+    <app-skill-swiper />
+  </div>
   <section id="services">
-    <div class="container-title">
-      <h2 class="title">Serviços</h2>
-    </div>
     <div class="content-info">
       <div class="description-info">
         <h3 class="text-description">Desenvolvimento web com atenção no designer</h3>
@@ -118,21 +118,7 @@
       </app-card-slot>
     </div>
   </section>
-  <section id="skill">
-    <div class="container-skill">
-      <div class="description">
-        <h2 class="title">Tecnologias e aplicações</h2>
-        <p class="text-info">
-          Com HTML, CSS e JavaScript, desenvolvemos interfaces responsivas e otimizadas.
-          Além disso, uso frameworks que me permitem criar aplicações web avançadas e
-          interativas.
-        </p>
-      </div>
-      <div class="skill-card">
-        <app-skill-swiper />
-      </div>
-    </div>
-  </section>
+
   <section id="faq">
     <div class="container">
       <div class="faq-content">

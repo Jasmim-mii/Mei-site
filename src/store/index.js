@@ -98,6 +98,49 @@ export default createStore({
           },
           href: "https://dentalcare-alpha.vercel.app/"
         },
+
+        {
+          id: 4,
+          img: "webDesigner_frente.png",
+          img2: "webDesigner.png",
+          img3: "webDesigner_full.png",
+          showCard: "",
+          description: "Lading Page, criado com figma ",
+          type: "UI Design",
+          title: "WebDesigner",
+          linguagem: {
+            1: "grommet-icons:figma",
+          },
+          href: ""
+        },
+        {
+          id: 5,
+          img: "cosmetic_frente.png",
+          img2: "cosmetic.png",
+          img3: "cosmetic_full.png",
+          showCard: "",
+          description: "Lading Page, criado com figma ",
+          type: "UI Design",
+          title: "cosmetic.",
+          linguagem: {
+            1: "grommet-icons:figma",
+          },
+          href: ""
+        },
+        {
+          id: 6,
+          img: "ase_frente.png",
+          img2: "ase.png",
+          img3: "ase_full.png",
+          showCard: "",
+          description: "Lading Page, criado com figma ",
+          type: "UI Design",
+          title: "asé",
+          linguagem: {
+            1: "grommet-icons:figma",
+          },
+          href: ""
+        },
       ],
       step_by_steps: [
         {
