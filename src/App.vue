@@ -1,17 +1,22 @@
 <template>
   <AppNavbar />
-  <section id="home">
+  <AppWhatsapp />
+  <section id="home" class="home">
     <div class="content">
-      <!-- <h2 class="">Desenvolvedora <span>Front-end</span></h2> -->
-      <h2 class="title">
-        construindo um mundo de possibilidades através da <span>inovação</span>
-      </h2>
+      <div class="absolute-home">
+        <!-- <h2 class="">Desenvolvedora <span>Front-end</span></h2> -->
+        <h2 class="title">
+          construindo um mundo de possibilidades através da
+          <span>inovação</span>
+        </h2>
 
-      <p class="text-info">
-        Criar sites profissionais, blogs, landing pages funcionais e interfaces atraentes.
-      </p>
+        <p class="text-info">
+          Criar sites profissionais, blogs, landing pages funcionais e interfaces
+          atraentes.
+        </p>
 
-      <app-btn btnTitle="Entre em contato" />
+        <app-btn btnTitle="Entre em contato" />
+      </div>
     </div>
     <div class="image-bg">
       <AppSwiperSlot />
@@ -25,7 +30,7 @@
       <div class="description-info">
         <h3 class="text-description">Desenvolvimento web com atenção no designer</h3>
         <p class="text-info">
-          Meu objetivo é transformar conceitos em realidade por meio de um design
+          Nosso objetivo é transformar conceitos em realidade por meio de um design
           cuidadosamente elaborado e uma implementação eficiente.
         </p>
       </div>
@@ -60,17 +65,29 @@
           Conheça o passo a passo o desenvolvimento de um projeto web
         </p>
       </div>
-      <div class="cards">
+      <div class="cards-step">
         <app-operations />
       </div>
     </div>
   </section>
   <section id="project">
     <div class="container-title">
-      <h2 class="title">Conheça meus projetos</h2>
+      <h2 class="title">Conheça nossos projetos</h2>
     </div>
+
+    <!-- <div id="filter">
+      <button class="filter-botton" @click="filter = 'all'">Mostrar Todos</button>
+      <button class="filter-botton" @click="filter = 'website'">Web Site</button>
+      <button class="filter-botton" @click="filter = 'IU Designer'">IU Designer</button>
+    </div> -->
+
     <div class="container-card">
-      <app-card-slot class="cards-project" v-for="w in work" :key="w.id">
+      <app-card-slot
+        class="cards-project"
+        v-for="w in work"
+        :key="w.id"
+        v-show="isVisible(w)"
+      >
         <img class="img-fluid" :src="require(`@/assets/work/${w.img}`)" />
 
         <div class="content-project">
@@ -81,7 +98,7 @@
 
             <p class="link">{{ w.type }}</p>
             <a :href="w.href" target="_blank">
-              <small class="link">Visitar site</small>
+              <!-- <small class="link">Visitar site</small> -->
             </a>
           </div>
           <div class="lenguage-project">
@@ -118,7 +135,14 @@
       </app-card-slot>
     </div>
   </section>
-
+  <section id="our_diferential">
+    <div class="container-title">
+      <h2 class="title">Nosso diferencial</h2>
+    </div>
+    <div class="differential">
+      <AppDiferential />
+    </div>
+  </section>
   <section id="faq">
     <div class="container">
       <div class="faq-content">
@@ -132,6 +156,7 @@
   </section>
   <section id="contact">
     <h2 class="title">Entre em contato</h2>
+    <p class="subtitle">Peça já seu orçamento</p>
     <app-contact />
   </section>
   <app-footer />
@@ -149,6 +174,8 @@ import AppOperations from "./components/AppOperations.vue";
 import AppFaq from "./components/AppFaq.vue";
 import AppPopUp from "./components/AppPopUp.vue";
 import AppContact from "./components/AppContact.vue";
+import AppDiferential from "./components/AppDiferential.vue";
+import AppWhatsapp from "./components/AppWhatsapp.vue";
 
 export default {
   name: "App",
@@ -164,9 +191,13 @@ export default {
     AppFaq,
     AppPopUp,
     AppContact,
+    AppDiferential,
+    AppWhatsapp,
   },
   data() {
-    return {};
+    return {
+      filter: "all",
+    };
   },
   methods: {
     //mouseover
@@ -177,6 +208,12 @@ export default {
     segundo(none, e) {
       e.preventDefault();
       this.multiploevento = none;
+    },
+    setFilter(categoria) {
+      this.filter = categoria;
+    },
+    isVisible(w) {
+      return this.filter === "all" || w.categoria === this.filter;
     },
   },
   computed: {
@@ -199,13 +236,14 @@ export default {
 
 
 #home
+  position: relative
+
   min-height: 70vh
   display: grid
   grid-template-columns: 1fr 1fr
   align-items: center
   gap: 2rem
   background: $background-primary
-  position: relative
   padding: 0 0 0 3.5rem
   @media screen and (max-width:854px)
     padding: 0 3.5rem 0 3.5rem
@@ -213,19 +251,6 @@ export default {
     display: flex
     align-items: center
 
-
-  &::before
-    content: ""
-    position: absolute
-    left: 0
-    top: 0
-    background: linear-gradient(90deg, #000 49.5%, rgba(0, 0, 0, .0) 99%, rgba(0, 0, 0, 0) 99.9%)
-    width: 100%
-    height: 100%
-    z-index: 1
-
-    @media screen and (max-width:854px)
-      background: linear-gradient(90deg, #000 0.5%, rgba(0, 0, 0, .5) 100%, rgba(0, 0, 0, .5) 50.9%)
 
 
   .social
@@ -243,9 +268,33 @@ export default {
         color: $color-brand-200
 
   .content
-    z-index: 1
-    display: block
-    width: 80%
+    // position: relative
+    @media screen and (max-width:854px)
+
+
+    .absolute-home
+      padding: 1rem
+      z-index: 1
+      position: absolute
+      width: 40%
+      left: 13rem
+      top: 5rem
+      background: rgba(50,50,51, 0.5)
+      backdrop-filter: blur(5rem)
+      border-radius: .5rem
+      @media screen and (max-width:854px)
+        padding: 1rem
+        z-index: 1
+        position: absolute
+        width: 80%
+        left: 2rem
+        top: 5rem
+        background: rgba(50,50,51, 0.8)
+        backdrop-filter: blur(5rem)
+
+
+
+
     @media screen and (max-width:854px)
         width: 100%
         text-align: center
@@ -270,8 +319,9 @@ export default {
 
 
   .image-bg
+
     height: 70vh
-    width: 45rem
+    width: 40rem
     text-align: center
     z-index: 0
 
@@ -285,9 +335,13 @@ export default {
 
 
 #services
+.subtitle
+  color: $color-brand-500
+  font-weight: 800
 .content-info
-  @media screen and (max-width:620px)
+  @media screen and (max-width:820px)
     display: block
+
 
   .container-card
     display: grid
@@ -305,7 +359,7 @@ export default {
     .card-none
       width: 20.6rem
       text-align: center
-      height: 16rem
+      height: 20rem
       border-radius: .3rem
       transition: .5s
       padding: 3.8rem 2rem
@@ -324,7 +378,7 @@ export default {
 
     .cards
       width: 20.6rem
-      height: 16rem
+      height: 20rem
       padding: 2.5rem 2rem
       border-radius: .3rem
       transition: .5s
@@ -373,7 +427,27 @@ export default {
           color: $color-text-black-200
 
 #project
+  #filter
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 2rem 0 2rem 0
+    gap: .7rem
 
+
+    .filter-botton
+      box-shadow: .2rem .2rem .2rem rgba(0,0,0, .1)
+      padding: .7rem
+      border: none
+      border-radius: 5rem
+      font-size: .8rem
+      font-weight: 800
+      box-sizing:  border-box
+      transition: .5s
+      color: $color-text-black-200
+
+      &:hover
+        background: $color-text-write-200
   .container-title
     width: 50%
     p
@@ -470,25 +544,16 @@ export default {
   background: $background-primary
 
   .container-step-by-step
-    position: relative
   .description
     width: 50%
     @media screen and (max-width:600px)
-      width: 100%
-
+      // width: 100%
 
     h2
       padding-bottom: 1.5rem
       color: $color-text-write-200
     p
       color: $color-text-write-600
-
-  .cards
-    @include grid(20rem)
-    gap: 3rem
-    padding-top: 3rem
-    @media screen and (max-width:976px)
-      @include grid(60rem)
 
 
 #skill
@@ -511,17 +576,18 @@ export default {
 
 #contact
 
-    .icon
-      background: #eee
-      padding: 2rem
-      text-align: center
-      width: 100%
-      color: $color-brand-500
-      font-size: 2.5rem
-      box-shadow: 0rem 0rem 1rem rgb(0, 0 ,0, 0.1 )
-      border-radius: .2rem
-      transition: all 0.2s ease-In-out
 
-      &:hover
-        transform: scale(1.1)
+  .icon
+    background: #eee
+    padding: 2rem
+    text-align: center
+    width: 100%
+    color: $color-brand-500
+    font-size: 2.5rem
+    box-shadow: 0rem 0rem 1rem rgb(0, 0 ,0, 0.1 )
+    border-radius: .2rem
+    transition: all 0.2s ease-In-out
+
+    &:hover
+      transform: scale(1.1)
 </style>

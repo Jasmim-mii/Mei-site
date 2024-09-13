@@ -1,70 +1,162 @@
 <template>
-  <div id="container-contact">
-    <div class="design-icon">
-      <div class="icon-contact">
-        <a
-          href="https://www.linkedin.com/in/michele-jasmim-a30a3321a/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon class="icon" icon="basil:linkedin-solid" />
-        </a>
-      </div>
+  <div id="contact-home">
+    <div class="contact-info">
+      <img class="img" src="../assets/contact.png" alt="" />
     </div>
-    <div class="design-icon">
-      <div class="icon-contact">
-        <a href="https://github.com/Jasmim-mii" target="_blank" rel="noopener noreferrer">
-          <Icon class="icon" icon="entypo-social:github" />
-        </a>
-      </div>
-    </div>
-    <div class="design-icon">
-      <div class="icon-contact">
-        <a
-          href="https://www.behance.net/michellejasmim"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon class="icon" icon="fontisto:behance" />
-        </a>
-      </div>
+    <div class="container">
+      <form action="https://api.staticforms.xyz/submit" method="post">
+        <input type="hidden" name="redirectTo" value="https://lloudtech.com.br/" />
+        <input
+          type="hidden"
+          name="accessKey"
+          value="90fb5fea-dea9-4d04-ac9d-224e0caa08d6"
+        />
+        <div class="form-group">
+          <label for="first_name">Nome:</label>
+          <input
+            type="text"
+            id="first_name"
+            name="name"
+            v-model="name"
+            required
+            maxlength="25"
+            minlength="2"
+          />
+        </div>
+        <div class="form-group">
+          <label for="last_name">Sobrenome:</label>
+          <input type="text" id="last_name" name="last_name" v-model="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" v-model="email" />
+        </div>
+
+        <div class="form-group">
+          <label for="massage">Mensagem:</label>
+          <textarea
+            id="massage"
+            rows="5"
+            cols="50"
+            name="message"
+            v-model="message"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
     </div>
   </div>
 </template>
 
 <script>
-import { Icon } from "@iconify/vue";
-
 export default {
-  components: { Icon },
+  components: {},
+  data() {
+    return {
+      action: "https://api.staticforms.xyz/submit",
+      first_name: "",
+      last_name: "",
+      email: "",
+      message: "",
+      isSent: false,
+    };
+  },
+  methods: {
+    submitForm() {
+      // Lógica de envio do formulário
+      this.isSent = true;
+    },
+    sendEmail() {
+      // Abre o cliente de e-mail com os parâmetros definidos
+      const newTab = window.open(
+        "mailto:michelejasmimdev@gmail.com?subject=Assunto%20Fazer%20orçamento%20sem%20compromisso",
+        "_blank"
+      );
+
+      // // Atualiza o estado para esconder o conteúdo
+      // this.isSent = true;
+      setTimeout(() => {
+        newTab.close();
+      }, 5000);
+    },
+  },
 };
 </script>
 
-<style lang="sass" scoped>
-@import "../sass/_mixin"
-@import "../sass/_variavel"
+<style scoped>
+#contact-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media screen and (max-width: 954px) {
+    display: block;
+  }
+}
+.contact-info {
+  height: 100%;
+  width: 100%;
+  @media screen and (max-width: 954px) {
+    padding: 5rem;
+  }
+}
+.img {
+  margin-top: 4rem;
+  width: 80%;
+}
 
-#container-contact
-    padding: 4rem 0
-    @include grid($val:5rem)
-    gap: 1rem
-    align-items: center
+.contact-container {
+  padding: 2rem 2rem;
 
-    .design-icon
-        display: flex
-        justify-content: center
-
-        .icon-contact
-            display: flex
-            align-items: center
-            justify-content: center
-            width: 100%
-            height: 5rem
-            border-radius: 0.5rem
-            text-align: center
-            background: $background-primary
-            .icon
-                color: $background-secondy
-                font-size: 2rem
+  @media screen and (max-width: 954px) {
+    width: 85%;
+  }
+}
+.container {
+  padding: 20px;
+  box-shadow: 0px 0px 20px #00000033;
+  border-radius: 8px;
+}
+.form-group {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #232323;
+}
+.form-group input,
+.form-group textarea {
+  width: 95%;
+  display: block;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  margin-top: 5px;
+}
+textarea {
+  resize: none;
+}
+button {
+  width: 30%;
+  display: inline-block;
+  border: none;
+  padding: 20px;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  margin-top: 10px;
+  background: #000;
+  color: #eee;
+  @media screen and (max-width: 954px) {
+    width: 100%;
+  }
+}
+.card-contact {
+  display: flex;
+  padding-bottom: 0.8rem;
+  align-items: center;
+  gap: 1rem;
+}
+span .icon {
+  font-size: 2.3rem;
+  color: #074d66;
+}
 </style>
->

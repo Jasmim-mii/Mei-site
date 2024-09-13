@@ -3,7 +3,7 @@
     <div id="logo">
       <img src="../assets/logo.png" alt="" />
       <h3>
-        <a href="#">Michele <span>Jasmim</span></a>
+        <a href="#">LLOUD <span>TECH</span></a>
       </h3>
     </div>
     <nav>
@@ -79,7 +79,7 @@ export default {
       margin: 0 auto
     img
       height: 2.5rem
-      width: 2.5rem
+      width: 3rem
 
 
     h3

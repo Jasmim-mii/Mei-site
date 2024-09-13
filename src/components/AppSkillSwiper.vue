@@ -4,7 +4,7 @@
     :modules="modules"
     :slides-per-view="4"
     :space-between="10"
-    :autoplay="true"
+    :autoplay="autoplayOptions"
     :CenteredSlides="true"
     @swiper="onSwiper"
     @slideChange="onSlideChange"
@@ -41,6 +41,14 @@ export default {
     SwiperSlide,
     Icon,
   },
+  data() {
+    return {
+      autoplayOptions: {
+        delay: 1000, // Tempo entre slides em ms (ajustar conforme necessário)
+        disableOnInteraction: false,
+      },
+    };
+  },
   setup() {
     return {
       modules: [Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCreative],
@@ -60,13 +68,19 @@ export default {
 .swiper
     width: 100%
     height: 100%
+    cursor: default
+
 
     .swiper-slide
         margin: 2rem 2rem 0rem 2rem
+        cursor: default
+
 
     .swiper-slide img
         width: 100%
         height:100%
+        cursor: default
+
 .card
 
     .content-skill
@@ -75,15 +89,6 @@ export default {
         padding-bottom: 1rem
         position: relative
         text-align: center
-
-        // &::before
-        //     content: ""
-        //     position: absolute
-        //     left: 0
-        //     bottom: 0
-        //     background: $color-brand-500
-        //     width: 100%
-        //     height: .2rem
 
         .skill-icons
             color: $color-text-black-200

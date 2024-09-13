@@ -15,12 +15,12 @@
       :creativeEffect="{
         prev: {
           shadow: true,
-          origin: 'left center',
+          origin: 'left',
           translate: ['-5%', 0, -200],
           rotate: [0, 100, 0],
         },
         next: {
-          origin: 'right center',
+          origin: 'right',
           translate: ['5%', 0, -200],
           rotate: [0, -100, 0],
         },
@@ -56,6 +56,7 @@ export default {
     Swiper,
     SwiperSlide,
   },
+
   setup() {
     return {
       modules: [Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCreative],
@@ -77,7 +78,7 @@ export default {
     .swiper-slide
         text-align: center
         display: flex
-        justify-content: center
+        justify-content: space-between
         align-items: center
     .swiper-slide img
         width: 100%

@@ -31,24 +31,24 @@ export default createStore({
           multiploevento1: "",
           title: "Desenvovimento Web",
           text:
-            "Desenvolvo sites profissionais, blogs, portfólios, landing pages e e-commerce",
+            "Desenvolvemos sites profissionais, blogs, portfólios, landing pages, e-commerce entre outros",
         },
 
         {
           id: 2,
           icon: "fa-object-group",
           multiploevento1: "",
-          title: "Back-End",
+          title: "Desenvolvimento de sistema",
           text:
-            "Com python faço uso do back-end, e junto com o framework django desenvolvo aplicações web",
+            " Criação de sistemas complexos nas mais diversas stacks de desenvolvimento do mercado, promovendo a integração de todas as áreas do seu negócio.",
         },
         {
           id: 3,
           icon: "fa-pencil",
           multiploevento1: "",
-          title: "Design de Interfaces (UI) ",
+          title: "Desenvolvimento de app ",
           text:
-            " Crio interface de forma que ela seja clara, objetiva e principalmente intuitiva para o usuário.",
+            "Desenvolvemos aplicativos híbridos Android e iOS de ponta a ponta. Auxiliamos desde a criação e configuração das contas nas stores até o desenvolvimento final da solução.",
         },
 
       ],
@@ -58,27 +58,27 @@ export default createStore({
           img: "marketing.png",
           img2: "marketing2.png",
           img3: "marketing3.png",
-          type: "Front-End",
+          categoria: "website",
           showCard: "",
-          description: "Page Captura simples, criada com foco em vende cursos de marketing online do nivel basico ao avançado além disso o projeto traz  elegancia,  simplicidade e obetividade. Aprendizado: Nesse projeto foi utilizado slot, componentes entre outros",
+          description: "Page Captura simples, com foco em vende cursos de marketing online do nivel basico ao avançado além disso o projeto traz  elegancia,  simplicidade e obetividade. Aprendizado: Nesse projeto foi utilizado slot, componentes entre outros",
           title: "MarketingPage",
           linguagem: {
-            2: "fa-brands:vuejs",
-            3: "typcn:css3",
+            // 2: "fa-brands:vuejs",
+            // 3: "typcn:css3",
           },
-          href: "https://marketing-page-jasmim-mii.vercel.app/"
+          href: ""
         },
         {
           id: 2,
           img: "docevinho1.png",
           img2: "docevinho2.png",
           img3: "docevinho3.png",
-          type: "UI Design",
+          categoria: "website",
           showCard: "",
-          description: "Wareframe de uma loja de vinho, com mais  pagina , esse wareframefo criado para desenvolvimento pessoal e gosto por criar design. Aprendizado: O conhecimento funcional do figma ajuda muito a hora de desenvolver um projeto com linha de codigo",
+          description: "Explore a nossa seleção exclusiva de vinhos premiados na Doce Vinhos. Cada garrafa é uma obra-prima, cuidadosamente elaborada para oferecer uma experiência de degustação incomparável. Desde vinhos tintos encorpados até brancos refrescantes, nossa coleção atende aos paladares mais exigentes.",
           title: "Loja Doce Vinho",
           linguagem: {
-            1: "grommet-icons:figma",
+            // 1: "grommet-icons:figma",
           },
         },
       
@@ -87,16 +87,17 @@ export default createStore({
           img: "dentalcare.png",
           img2: "dentalcare2.png",
           img3: "dentalcare3.png",
+          categoria: "website",
           showCard: "",
-          description: "Lading Page, projeto criado para um consultorio dentario, buscando sempre o foco de levar a informação para o cliente de forma objetiva. projeto simples. Aprendizado: Lading page criado com html, bootstrap e css",
-          type: "Front-End",
+          description: "Lading Page, projeto criado para um consultorio dentario, buscando sempre o foco de levar a informação para o cliente de forma objetiva.",
+        
           title: "DentalCare.",
           linguagem: {
-            2: "fluent:javascript-24-regular",
-            3: "ant-design:html5-filled",
-            4: "typcn:css3",
+            // 2: "fluent:javascript-24-regular",
+            // 3: "ant-design:html5-filled",
+            // 4: "typcn:css3",
           },
-          href: "https://dentalcare-alpha.vercel.app/"
+          href: ""
         },
 
         {
@@ -104,12 +105,13 @@ export default createStore({
           img: "webDesigner_frente.png",
           img2: "webDesigner.png",
           img3: "webDesigner_full.png",
+          categoria: "IU Designer",
           showCard: "",
-          description: "Lading Page, criado com figma ",
-          type: "UI Design",
+          description: "Com uma abordagem criativa e orientada para resultados, oferecemos soluções personalizadas em design web que capturam a essência da sua marca e encantam seus visitantes. Seja para um site impressionante, uma loja online ou uma reformulação visual, nós entregamos projetos que não apenas se destacam, mas também geram resultados ",
+          
           title: "WebDesigner",
           linguagem: {
-            1: "grommet-icons:figma",
+            // 1: "grommet-icons:figma",
           },
           href: ""
         },
@@ -118,12 +120,13 @@ export default createStore({
           img: "cosmetic_frente.png",
           img2: "cosmetic.png",
           img3: "cosmetic_full.png",
+          categoria: "IU Designer",
           showCard: "",
-          description: "Lading Page, criado com figma ",
-          type: "UI Design",
+          description: "Na Cosmetic, somos especialistas em desenvolvimento e terceirização de cosméticos de alta qualidade. Colaboramos com marcas para criar produtos inovadores e eficazes, desde fórmulas exclusivas até embalagens elegantes. Nossa equipe de especialistas garante que cada produto atenda aos mais altos padrões de qualidade e segurança.  ",
+          
           title: "cosmetic.",
           linguagem: {
-            1: "grommet-icons:figma",
+            // 1: "grommet-icons:figma",
           },
           href: ""
         },
@@ -132,16 +135,19 @@ export default createStore({
           img: "ase_frente.png",
           img2: "ase.png",
           img3: "ase_full.png",
+          categoria: "IU Designer",
           showCard: "",
-          description: "Lading Page, criado com figma ",
-          type: "UI Design",
-          title: "asé",
+          description: "Descubra a essência da tradição e exclusividade com a Império Nossa marca oferecendo produtos e experiências que capturam a verdadeira essência da cultura. Desde itens sofisticados até ofertas especiais, garantimos qualidade e um toque de originalidade em cada detalhe.",
+          
+          title: "Imperio",
           linguagem: {
-            1: "grommet-icons:figma",
+            // 1: "grommet-icons:figma",
           },
           href: ""
         },
       ],
+          
+    
       step_by_steps: [
         {
           id: 1,
@@ -152,18 +158,8 @@ export default createStore({
           text:
             " Determine claramente o propósito e as funcionalidades do software que você deseja criar. Identifique as necessidades dos usuários e estabeleça os principais objetivos que você espera alcançar com o software.",
         },
-
         {
           id: 2,
-          icon: "typcn:css3",
-          showCard: "",
-          multiploevento1: "",
-          title: "Pesquisa",
-          text:
-            "Identifique e documente todos os requisitos funcionais e não funcionais do software. Isso inclui recursos específicos, plataformas de destino, desempenho, segurança, entre outros.",
-        },
-        {
-          id: 3,
           icon: "fa6-brands:sass",
           showCard: "",
           multiploevento1: "",
@@ -172,7 +168,7 @@ export default createStore({
             "definindo a arquitetura geral, a estrutura de dados, as interfaces do usuário e os principais componentes do sistema. Isso ajudará a ter uma visão clara da estrutura do software antes de iniciar o desenvolvimento. ",
         },
         {
-          id: 5,
+          id: 3,
           icon: "simple-icons:tailwindcss",
           showCard: "",
           multiploevento1: "",
@@ -180,25 +176,55 @@ export default createStore({
           text:
             "Com o design em mãos, inicie o desenvolvimento do software. Escolha uma linguagem de programação adequada e comece a escrever o código, implementando as funcionalidades e os componentes definidos nos estágios anteriores.",
         },
+       
         {
-          id: 5,
+          id: 4,
           icon: "fluent:javascript-24-regular",
           showCard: "",
           multiploevento1: "",
-          title: "Testes",
+          title: "Testes e entrega",
           text:
-            "À medida que o desenvolvimento progride, realize testes contínuos para verificar se o software está funcionando corretamente. Isso pode incluir testes de unidade, testes de integração, testes de aceitação e testes de desempenho.",
-        },
-        {
-          id: 6,
-          icon: "devicon-plain:vuetify",
-          showCard: "",
-          multiploevento1: "",
-          title: "Entrega",
-          text:
-         "Após a conclusão do desenvolvimento, realizamos testes finais para identificar e corrigir possíveis problemas. A entrega pode envolver a colaboração com equipes de marketing, desenvolvedores e outros profissionais para garantir que a solução seja lançada com sucesso para os usuários finais, seguindo fielmente o design criado.",
-        },
+            "O teste identifica bugs e falhas, enquanto a entrega envolve a disponibilização segura do software para uso, assegurando que ele atenda às expectativas dos usuários finais.",
+        },      
        
+      ],
+      differential:[
+        {
+        id: 1,
+        img: "image-calendar.png",
+        icon: "ant-design:html5-filled",
+        showCard: "",
+        title: "Pazo certeiro",
+        text:
+          "Entregamos o software no prazo acordado, com pontualidade e eficiência.",
+      },
+      {
+        id: 2,
+        img: "image-qualidade.png",
+        icon: "ant-design:html5-filled",
+        showCard: "",
+        title: "Qualidade",
+        text:
+          "Oferecemos produtos e serviços de alta qualidade, sempre superando expectativas.",
+      },
+      {
+        id: 3,
+        img: "image-foco.png",
+        icon: "ph:instagram-logo",
+        showCard: "",
+        title: "Foco no cliente",
+        text:
+          "Focamos em soluções inovadoras e personalizadas para nossos clientes.",
+      },
+      {
+        id: 4,
+        img: "experiencia.png",
+        icon: "ph:instagram-logo",
+        showCard: "",
+        title: "Experiência",
+        text:
+          "Com anos de experiência, oferecemos soluções confiáveis e eficazes.",
+      },
       ],
       skill: [
         {
@@ -284,6 +310,7 @@ export default createStore({
             "Figma é um aplicativo de criação de interfaces e protótipos baseado na web ",
         },
       ],
+     
       faq: [
         {
           id: 1,
@@ -341,11 +368,20 @@ export default createStore({
       ],
   },
   getters: {
+  
+ 
+
   },
   mutations: {
+ 
+
   },
   actions: {
+  
+ 
+  
   },
   modules: {
   }
 })
+
