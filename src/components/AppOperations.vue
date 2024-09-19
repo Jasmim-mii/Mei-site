@@ -1,5 +1,5 @@
 <template>
-  <div class="cards">
+  <div id="cards">
     <div id="grid_left">
       <app-card-slot class="card">
         <div class="description-step">
@@ -57,121 +57,124 @@ export default {
 @import "../sass/_mixin"
 @import "../sass/_variavel"
 
-.cards
-    display: grid
-    grid-template-columns: 1fr 1fr
-    // @include grid(20rem)
-    gap: 1rem
-    padding-top: .5rem
-    @media screen and (max-width:976px)
-      @include grid(30rem)
-
-#grid-right
+#cards
   display: grid
   grid-template-columns: 1fr 1fr
-  gap: 2rem
-
-  @media screen and (max-width:976px)
-    // max-width: 85vw
-    margin-top: 1rem
+  gap: 1rem
+  padding-top: .5rem
+  @media screen and (max-width:1194px)
     display: grid
-    grid-template-columns: repeat(2, 1fr)
-    gap: 1rem
-  @media screen and (max-width:710px)
-    gap: 1rem
-  @media screen and (max-width:553px)
-    display: block
+    grid-template-columns: 1fr 2fr
+    gap: 4rem
+  @media screen and (max-width:874px)
+    @include grid(30rem)
+  @media screen and (max-width:520px)
+    @include grid(20rem)
+  @media screen and (max-width:380px)
+    @include grid(10rem)
 
+  #grid-right
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 2rem
 
-
-
-  .card
-    background: rgba(58, 75, 83, 0.25)
-    padding: 1.2rem
-    height: 20rem
-
-    @media screen and (max-width:1216px)
-      margin-top: 1rem
-      height: 20rem
-      display: table
-
-    .description-step
-      padding-top: 1rem
-
-      .text-info
-        color: $color-text-write-600
-        font-size: .8rem
-
-    .content-step
-      display: flex
-      gap: 0
-      padding-bottom: 1rem
-      position: relative
-
-      &::before
-        content: ""
-        position: absolute
-        left: 0
-        bottom: 0
-        background: $color-brand-500
-        width: 80%
-        height: .2rem
-
-      .step-icons
-        color:$color-text-write-200
-        font-size: 2rem
-
-      h3
-        color:$color-text-write-200
-        padding-bottom: .8rem
-        @include text-transform($transform: uppercase, $weight: 600, $size: .8rem)
-
-
-#grid_left
-  grid-template-columns: 1fr 1fr
-  gap: 2rem
-  align-content: center
-
-  .card
-
-    background: rgba(58, 75, 83, 0.5)
-    padding: 1.2rem
-    display: table
     @media screen and (max-width:976px)
       margin-top: 1rem
-      height: 15rem
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 1rem
+    @media screen and (max-width:710px)
+      gap: 1rem
+    @media screen and (max-width:553px)
+      display: block
 
 
-    .description-step
-
-      h3
-        color: $color-text-write-600
-
-      .text-info
-        color: $color-text-write-600
 
 
-    .content-step
-      display: flex
-      gap: 0
-      padding-bottom: 1rem
-      position: relative
+    .card
+      background: rgba(58, 75, 83, 0.25)
+      padding: 1.2rem
+      height: 20rem
 
-      &::before
-        content: ""
-        position: absolute
-        left: 0
-        bottom: 0
-        background: $color-brand-500
-        width: 80%
-        height: .2rem
+      @media screen and (max-width:1216px)
+        margin-top: 1rem
+        height: 20rem
+        display: table
 
-      .step-icons
-        color:$color-text-write-200
-        font-size: 2rem
+      .description-step
+        padding-top: 1rem
 
-      h3
-        color:$color-text-write-200
-        padding-bottom: .8rem
-        @include text-transform($transform: uppercase, $weight: 600, $size: .8rem)
+        .text-info
+          color: $color-text-write-600
+
+      .content-step
+        display: flex
+        gap: 0
+        padding-bottom: 1rem
+
+        &::before
+          content: ""
+          position: absolute
+          left: 0
+          bottom: 0
+          background: $color-brand-500
+          width: 80%
+          height: .2rem
+
+        .step-icons
+          color:$color-text-write-200
+          font-size: 2rem
+
+        h3
+          color:$color-text-write-200
+          padding-bottom: .8rem
+          @include text-transform($transform: uppercase, $weight: 600, $size: .8rem)
+
+
+  #grid_left
+    display: inline-block
+    margin: auto 0
+
+    .card
+      background: rgba(58, 75, 83, 0.5)
+      padding: 1.2rem
+      display: table
+      @media screen and (max-width:1194px)
+        margin-top: 1rem
+        height: 15rem
+        width: 100%
+
+
+      .description-step
+
+        h3
+          color: $color-text-write-600
+
+        .text-info
+          color: $color-text-write-600
+
+
+      .content-step
+        display: flex
+        gap: 0
+        padding-bottom: 1rem
+        position: relative
+
+        &::before
+          content: ""
+          position: absolute
+          left: 0
+          bottom: 0
+          background: $color-brand-500
+          width: 80%
+          height: .2rem
+
+        .step-icons
+          color:$color-text-write-200
+          font-size: 2rem
+
+        h3
+          color:$color-text-write-200
+          padding-bottom: .8rem
+          @include text-transform($transform: uppercase, $weight: 600, $size: .8rem)
 </style>

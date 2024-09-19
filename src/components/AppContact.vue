@@ -4,8 +4,12 @@
       <img class="img" src="../assets/contact.png" alt="" />
     </div>
     <div class="container">
-      <form action="https://api.staticforms.xyz/submit" method="post">
-        <input type="hidden" name="redirectTo" value="https://lloudtech.com.br/" />
+      <form
+        @submit.prevent="submitForm"
+        action="https://api.staticforms.xyz/submit"
+        method="post"
+      >
+        <!-- <input type="hidden" name="redirectTo" value="https://lloudtech.com.br/" /> -->
         <input
           type="hidden"
           name="accessKey"
@@ -16,16 +20,26 @@
           <input
             type="text"
             id="first_name"
-            name="name"
-            v-model="name"
+            name="first_name"
+            v-model="first_name"
             required
-            maxlength="25"
-            minlength="2"
           />
+          <p v-if="errorFullname" class="text-info">
+            Deve conter no minino 4 caracteres!
+          </p>
         </div>
         <div class="form-group">
           <label for="last_name">Sobrenome:</label>
-          <input type="text" id="last_name" name="last_name" v-model="name" required />
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            v-model="last_name"
+            required
+          />
+          <p v-if="errorFullname" class="text-info">
+            Deve conter no minino 4 caracteres!
+          </p>
         </div>
         <div class="form-group">
           <label for="email">Email:</label>
@@ -42,9 +56,13 @@
             v-model="message"
             required
           ></textarea>
+          <p v-if="errorMessage" class="text-info">
+            Deve conter no minino 25 caracteres!
+          </p>
         </div>
 
         <button type="submit">Enviar</button>
+        <p v-if="messageSuccess" class="msgSuccess">{{ msgsuccess }}</p>
       </form>
     </div>
   </div>
@@ -61,31 +79,57 @@ export default {
       email: "",
       message: "",
       isSent: false,
+      errorFullname: false,
+      errorMessage: false,
+      messageSuccess: false,
+      msgsuccess: "Mensagem enviado com sucesso!",
     };
   },
   methods: {
     submitForm() {
       // Lógica de envio do formulário
       this.isSent = true;
-    },
-    sendEmail() {
-      // Abre o cliente de e-mail com os parâmetros definidos
-      const newTab = window.open(
-        "mailto:michelejasmimdev@gmail.com?subject=Assunto%20Fazer%20orçamento%20sem%20compromisso",
-        "_blank"
-      );
 
-      // // Atualiza o estado para esconder o conteúdo
-      // this.isSent = true;
+      if (this.first_name.length < 4) {
+        this.errorFullname = true;
+      } else {
+        this.errorFullname = false;
+      }
+
+      //validação message
+      if (this.message.length < 25) {
+        this.errorMessage = true;
+      } else {
+        this.errorMessage = false;
+      }
+
+      // se não tiver erros
+      if (!this.errorFullname && !this.errorMessage) {
+        this.messageSuccess = true;
+        this.first_name = "";
+        this.last_name = "";
+        this.email = "";
+        this.message = "";
+      }
+
       setTimeout(() => {
-        newTab.close();
-      }, 5000);
+        this.messageSuccess = false;
+      }, 10000);
     },
   },
 };
 </script>
 
 <style scoped>
+.msgSuccess {
+  color: green;
+  padding-top: 1rem;
+}
+.text-info {
+  font-size: 0.8rem;
+  transition: 0.2s;
+  color: #ff0000;
+}
 #contact-home {
   display: grid;
   grid-template-columns: 1fr 1fr;

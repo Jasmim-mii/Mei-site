@@ -1,6 +1,6 @@
 <template>
   <div v-if="showButton" class="whatsapp-button">
-    <a href="https://wa.me/21972028132" target="_blank">
+    <a :href="`https://wa.me/${tel}`" target="_blank">
       <Icon icon="logos:whatsapp-icon" />
     </a>
   </div>
@@ -16,6 +16,7 @@ export default {
   data() {
     return {
       showButton: false,
+      tel: "+5521972028132",
     };
   },
   methods: {

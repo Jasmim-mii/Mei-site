@@ -237,7 +237,6 @@ export default {
 
 #home
   position: relative
-
   min-height: 70vh
   display: grid
   grid-template-columns: 1fr 1fr
@@ -250,6 +249,10 @@ export default {
     text-align: center
     display: flex
     align-items: center
+    min-height: 40vh
+
+
+
 
 
 
@@ -268,8 +271,6 @@ export default {
         color: $color-brand-200
 
   .content
-    // position: relative
-    @media screen and (max-width:854px)
 
 
     .absolute-home
@@ -287,10 +288,15 @@ export default {
         z-index: 1
         position: absolute
         width: 80%
-        left: 2rem
-        top: 5rem
+        left: 4rem
+        top: 10rem
         background: rgba(50,50,51, 0.8)
         backdrop-filter: blur(5rem)
+      @media screen and (max-width:854px)
+        left: 2rem
+
+
+
 
 
 
@@ -302,7 +308,7 @@ export default {
     .title
       color: $color-text-write-200
       @include text-transform($transform: uppercase, $weight: 700, $size: 1.5rem)
-      line-height: 1.3
+      line-height: 1.2
 
       @media screen and (max-width:620px)
         font-size: 1rem
@@ -315,12 +321,15 @@ export default {
     .text-info
       padding: .8rem 0 2rem 0
       color: $color-text-write-500
+      font-size: 1.2rem
+      @media screen and (max-width:620px)
+        font-size: 1rem
 
 
 
   .image-bg
 
-    height: 70vh
+    height: 100%
     width: 40rem
     text-align: center
     z-index: 0
@@ -346,14 +355,12 @@ export default {
   .container-card
     display: grid
     grid-template-columns: repeat(2,1fr)
-    gap: 1rem
-    @media screen and (max-width:620px)
-      display: grid
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr))
-      gap: .2rem
+    gap: 2.3rem
 
-
-
+    @media screen and (max-width:520px)
+      @include grid(20rem)
+    @media screen and (max-width:380px)
+      @include grid(10rem)
 
 
     .card-none
@@ -362,16 +369,15 @@ export default {
       height: 20rem
       border-radius: .3rem
       transition: .5s
+      display: table
       padding: 3.8rem 2rem
       background: $color-brand-200
       @media screen and (max-width:1028px)
         width: 100%
         display: table
         height: 100%
-        padding: 1.5rem 1rem
+        padding: 3rem 1rem
         margin: 0
-
-
 
       .text-info
         color: $color-text-write-200
@@ -385,13 +391,13 @@ export default {
       border: .1rem solid $color-text-write-500
       position: relative
       transition: .5s
+      display: table
       @media screen and (max-width:1028px)
         width: 100%
         height: 100%
+        display: table
         padding: 1.5rem 1rem
-      .subtitle
-        @media screen and (max-width:620px)
-          font-size: .6rem
+
 
 
 
