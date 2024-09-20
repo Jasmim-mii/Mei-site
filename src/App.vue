@@ -249,7 +249,7 @@ export default {
     text-align: center
     display: flex
     align-items: center
-    min-height: 40vh
+    min-height: 55vh
 
 
 
@@ -294,6 +294,9 @@ export default {
         backdrop-filter: blur(5rem)
       @media screen and (max-width:854px)
         left: 2rem
+        top: 2rem
+
+
 
 
 
