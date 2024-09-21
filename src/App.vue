@@ -114,7 +114,7 @@
         <app-pop-up v-if="w.showCard" @close="w.showCard = false">
           <div class="headerModal">
             <div class="imgModal">
-              <img :src="require(`@/assets/work/${w.img}`)" />
+              <img :src="require(`@/assets/work/${w.img}`)" :alt="w.categoria" />
             </div>
             <div class="textModal">
               <p class="smallModal">{{ w.type }}</p>
@@ -126,7 +126,7 @@
           </div>
           <div class="descriptionModal">
             <div class="mockupModal">
-              <img :src="require(`@/assets/work/${w.img}`)" />
+              <img :src="require(`@/assets/work/${w.img}`)" :alt="w.categoria" />
             </div>
             <div class="mockupModal">
               <img :src="require(`@/assets/work/${w.img2}`)" :alt="w.categoria" />
