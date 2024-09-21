@@ -248,11 +248,12 @@ export default {
   gap: 2rem
   background: $background-primary
   padding: 0 0 0 3.5rem
+
   @media screen and (max-width:854px)
     text-align: center
     display: flex
     align-items: center
-    min-height: 30vh
+    min-height: 40vh
 
   .social
     position: relative
@@ -361,7 +362,7 @@ export default {
       transition: .5s
       display: table
       padding: 3.8rem 2rem
-      background: $color-brand-200
+      background: $color-brand-500
       @media screen and (max-width:1028px)
         width: 100%
         display: table

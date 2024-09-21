@@ -94,7 +94,7 @@ export default {
       color: $color-text-write-200
       font-size: .8rem
     span
-      color: #546E7A
+      color: #81a9bb
 
   nav
     padding: 0
