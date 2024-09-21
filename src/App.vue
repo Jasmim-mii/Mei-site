@@ -88,18 +88,22 @@
         :key="w.id"
         v-show="isVisible(w)"
       >
-        <img class="img-fluid" :src="require(`@/assets/work/${w.img}`)" />
+        <img
+          class="img-fluid"
+          :src="require(`@/assets/work/${w.img}`)"
+          :alt="w.categoria"
+        />
 
         <div class="content-project">
           <div class="description-project">
-            <a @click="w.showCard = true"
+            <a @click="w.showCard = true" :href="w.href" target="_blank"
               ><h4 class="link">{{ w.title }}</h4></a
             >
 
             <p class="link">{{ w.type }}</p>
-            <a :href="w.href" target="_blank">
-              <!-- <small class="link">Visitar site</small> -->
-            </a>
+            <!-- <a :href="w.href" target="_blank">
+              <small class="link">Visitar site</small> 
+            </a> -->
           </div>
           <div class="lenguage-project">
             <div v-for="(i, index) in w.linguagem" :key="index">
@@ -125,11 +129,11 @@
               <img :src="require(`@/assets/work/${w.img}`)" />
             </div>
             <div class="mockupModal">
-              <img :src="require(`@/assets/work/${w.img2}`)" />
+              <img :src="require(`@/assets/work/${w.img2}`)" :alt="w.categoria" />
             </div>
           </div>
           <div class="prototypeModal">
-            <img :src="require(`@/assets/work/${w.img3}`)" />
+            <img :src="require(`@/assets/work/${w.img3}`)" :alt="w.categoria" />
           </div>
         </app-pop-up>
       </app-card-slot>

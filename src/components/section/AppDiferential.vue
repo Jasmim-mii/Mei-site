@@ -10,6 +10,7 @@
           <img
             class="img-fluid"
             :src="require(`@/assets/differential/${differentials.img}`)"
+            :alt="differentials.title"
           />
         </div>
         <div class="decription-differential">

@@ -6,22 +6,22 @@ export default createStore({
         {
           id: 1,
           image: "frame4.png",
-          text: 'lorem 1'
+          text: 'imagem1'
         },
         {
           id: 2,
           image: "frame1.png",
-          text: 'lorem 2'
+          text: 'imagem2'
         },
         {
           id: 3,
           image: "frame2.png",
-          text: 'lorem 3'
+          text: 'imagem3'
         },
         {
           id: 4,
           image: "frame3.png",
-          text: 'lorem 4'
+          text: 'imagem4'
         },
       ],
       service: [
@@ -66,7 +66,7 @@ export default createStore({
             // 2: "fa-brands:vuejs",
             // 3: "typcn:css3",
           },
-          href: ""
+          //href: ""
         },
         {
           id: 2,
@@ -89,15 +89,14 @@ export default createStore({
           img3: "odonto/dentalcare3.png",
           categoria: "website",
           showCard: "",
-          description: "Lading Page, projeto criado para um consultorio dentario, buscando sempre o foco de levar a informação para o cliente de forma objetiva.",
-        
+          description: "Lading Page, projeto criado para um consultorio dentario, buscando sempre o foco de levar a informação para o cliente de forma objetiva.",        
           title: "DentalCare.",
           linguagem: {
             // 2: "fluent:javascript-24-regular",
             // 3: "ant-design:html5-filled",
             // 4: "typcn:css3",
           },
-          href: ""
+         // href: ""
         },
 
         {
@@ -107,13 +106,12 @@ export default createStore({
           img3: "webdesigner/webDesigner_full.png",
           categoria: "IU Designer",
           showCard: "",
-          description: "Com uma abordagem criativa e orientada para resultados, oferecemos soluções personalizadas em design web que capturam a essência da sua marca e encantam seus visitantes. Seja para um site impressionante, uma loja online ou uma reformulação visual, nós entregamos projetos que não apenas se destacam, mas também geram resultados ",
-          
+          description: "Com uma abordagem criativa e orientada para resultados, oferecemos soluções personalizadas em design web que capturam a essência da sua marca e encantam seus visitantes. Seja para um site impressionante, uma loja online ou uma reformulação visual, nós entregamos projetos que não apenas se destacam, mas também geram resultados ",          
           title: "WebDesigner",
           linguagem: {
             // 1: "grommet-icons:figma",
           },
-          href: ""
+          //href: ""
         },
         {
           id: 5,
@@ -123,12 +121,11 @@ export default createStore({
           categoria: "IU Designer",
           showCard: "",
           description: "Na Cosmetic, somos especialistas em desenvolvimento e terceirização de cosméticos de alta qualidade. Colaboramos com marcas para criar produtos inovadores e eficazes, desde fórmulas exclusivas até embalagens elegantes. Nossa equipe de especialistas garante que cada produto atenda aos mais altos padrões de qualidade e segurança.  ",
-          
           title: "cosmetic.",
           linguagem: {
             // 1: "grommet-icons:figma",
           },
-          href: ""
+         // href: ""
         },
         {
           id: 6,
@@ -137,13 +134,12 @@ export default createStore({
           img3: "ase/ase_full.png",
           categoria: "IU Designer",
           showCard: "",
-          description: "Descubra a essência da tradição e exclusividade com a Império Nossa marca oferecendo produtos e experiências que capturam a verdadeira essência da cultura. Desde itens sofisticados até ofertas especiais, garantimos qualidade e um toque de originalidade em cada detalhe.",
-          
+          description: "Descubra a essência da tradição e exclusividade com a Império Nossa marca oferecendo produtos e experiências que capturam a verdadeira essência da cultura. Desde itens sofisticados até ofertas especiais, garantimos qualidade e um toque de originalidade em cada detalhe.",        
           title: "Imperio",
           linguagem: {
             // 1: "grommet-icons:figma",
           },
-          href: ""
+          //href: ""
         },
       ],
           

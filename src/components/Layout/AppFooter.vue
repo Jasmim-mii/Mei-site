@@ -2,7 +2,7 @@
   <section id="footer">
     <div id="grid-footer">
       <div id="logo">
-        <img src="@/assets/logo/logo.png" alt="" />
+        <img src="@/assets/logo/logo.png" alt="logolloudtech" />
         <h3 class="logo">
           <a href="#">LLOUD <span>TECH</span></a>
         </h3>

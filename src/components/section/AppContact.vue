@@ -1,7 +1,7 @@
 <template>
   <div id="contact-home">
     <div class="contact-info">
-      <img class="img" src="@/assets/contact/contact.png" alt="" />
+      <img class="img" src="@/assets/contact/contact.png" alt="contatolloudtech" />
     </div>
     <div class="container">
       <form
@@ -147,6 +147,7 @@ export default {
 .img {
   margin-top: 4rem;
   width: 80%;
+  height: 40%;
 }
 
 .contact-container {

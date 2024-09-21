@@ -1,7 +1,7 @@
 <template>
   <header id="header">
     <div id="logo">
-      <img src="@/assets/logo/logo.png" alt="" />
+      <img src="@/assets/logo/logo.png" alt="logollooudtech" />
       <h3>
         <a href="#">LLOUD <span>TECH</span></a>
       </h3>
@@ -10,30 +10,32 @@
       <div class="btn-menu" @click="showMenu">
         <Icon icon="ri:menu-5-fill" color="black" />
       </div>
-      <div v-show="menu" class="list">
-        <li class="menu_list">
-          <div class="icon_"><Icon icon="ion:home-sharp" /></div>
-          <a class="menu_text" href="#home"> Inicio</a>
-        </li>
-        <li class="menu_list">
-          <div class="icon_"><Icon icon="ic:outline-work" /></div>
-          <a class="menu_text" href="#services"> Service</a>
-        </li>
-        <li class="menu_list">
-          <div class="icon_"><Icon icon="fluent:step-24-filled" /></div>
-          <a class="menu_text" href="#step-by-step"> Como Funciona</a>
-        </li>
+      <div v-show="menu">
+        <ul class="list">
+          <li class="menu_list">
+            <div class="icon_"><Icon icon="ion:home-sharp" /></div>
+            <a class="menu_text" href="#home"> Inicio</a>
+          </li>
+          <li class="menu_list">
+            <div class="icon_"><Icon icon="ic:outline-work" /></div>
+            <a class="menu_text" href="#services"> Service</a>
+          </li>
+          <li class="menu_list">
+            <div class="icon_"><Icon icon="fluent:step-24-filled" /></div>
+            <a class="menu_text" href="#step-by-step"> Como Funciona</a>
+          </li>
 
-        <li class="menu_list">
-          <div class="icon_"><Icon icon="grommet-icons:projects" /></div>
-          <a class="menu_text" href="#project"> Projetos</a>
-        </li>
-        <li class="menu_list">
-          <div class="icon_">
-            <Icon icon="tabler:phone-filled" />
-          </div>
-          <a class="menu_text" href="#contact"> Contato</a>
-        </li>
+          <li class="menu_list">
+            <div class="icon_"><Icon icon="grommet-icons:projects" /></div>
+            <a class="menu_text" href="#project"> Projetos</a>
+          </li>
+          <li class="menu_list">
+            <div class="icon_">
+              <Icon icon="tabler:phone-filled" />
+            </div>
+            <a class="menu_text" href="#contact"> Contato</a>
+          </li>
+        </ul>
       </div>
     </nav>
   </header>
@@ -123,10 +125,6 @@ export default {
         width: 100%
         margin:  0
         z-index: 5
-
-
-
-
 
     .list
       display: flex

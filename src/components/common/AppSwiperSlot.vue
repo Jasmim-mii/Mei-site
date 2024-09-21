@@ -27,7 +27,11 @@
       }"
     >
       <swiper-slide class="swiper-slide" v-for="j in images" :key="j.id">
-        <img class="image-slide" :src="require(`@/assets/home/${j.image}`)" />
+        <img
+          class="image-slide"
+          :src="require(`@/assets/home/${j.image}`)"
+          :alt="j.text"
+        />
       </swiper-slide>
     </swiper>
   </slot>
