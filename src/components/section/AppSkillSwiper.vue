@@ -63,8 +63,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "../sass/_mixin"
-@import "../sass/_variavel"
+@import "@/sass/_mixin"
+@import "@/sass/_variavel"
 .swiper
     width: 100%
     height: 100%

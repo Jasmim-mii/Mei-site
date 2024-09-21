@@ -15,8 +15,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "../sass/_mixin"
-@import "../sass/_variavel"
+@import "@/sass/_mixin"
+@import "@/sass/_variavel"
 
 .btn
   display: inline-block

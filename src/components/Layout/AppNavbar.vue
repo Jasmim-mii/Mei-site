@@ -1,7 +1,7 @@
 <template>
   <header id="header">
     <div id="logo">
-      <img src="../assets/logo.png" alt="" />
+      <img src="@/assets/logo/logo.png" alt="" />
       <h3>
         <a href="#">LLOUD <span>TECH</span></a>
       </h3>
@@ -58,8 +58,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "../sass/_mixin"
-@import "../sass/_variavel"
+@import "@/sass/_mixin"
+@import "@/sass/_variavel"
 
 #header
   display: flex

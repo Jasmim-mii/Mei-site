@@ -32,8 +32,8 @@
 </template>
 
 <script>
-import AppCardSlot from "./AppCardSlot.vue";
-import AppBtn from "./AppBtn.vue";
+import AppCardSlot from "../common/AppCardSlot.vue";
+import AppBtn from "../common/AppBtn.vue";
 
 export default {
   components: {
@@ -54,8 +54,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "../sass/_mixin"
-@import "../sass/_variavel"
+@import "@/sass/_mixin"
+@import "@/sass/_variavel"
 
 #cards
   display: grid

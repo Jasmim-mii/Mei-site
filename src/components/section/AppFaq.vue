@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import AppCardSlot from "./AppCardSlot.vue";
+import AppCardSlot from "../common/AppCardSlot.vue";
 export default {
   components: {
     AppCardSlot,
@@ -37,8 +37,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "../sass/_mixin"
-@import "../sass/_variavel"
+@import "@/sass/_mixin"
+@import "@/sass/_variavel"
 
 
 .container-faq

@@ -1,7 +1,7 @@
 <template>
   <div id="contact-home">
     <div class="contact-info">
-      <img class="img" src="../assets/contact.png" alt="" />
+      <img class="img" src="@/assets/contact/contact.png" alt="" />
     </div>
     <div class="container">
       <form

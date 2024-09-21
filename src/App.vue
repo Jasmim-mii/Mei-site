@@ -163,19 +163,19 @@
 </template>
 
 <script>
-import AppBtn from "./components/AppBtn.vue";
-import AppCardSlot from "./components/AppCardSlot.vue";
-import AppNavbar from "./components/AppNavbar.vue";
-import AppSwiperSlot from "./components/AppSwiperSlot.vue";
+import AppBtn from "./components/common/AppBtn.vue";
+import AppCardSlot from "./components/common/AppCardSlot.vue";
+import AppNavbar from "./components/Layout/AppNavbar.vue";
+import AppSwiperSlot from "./components/common/AppSwiperSlot.vue";
 import { Icon } from "@iconify/vue";
-import AppFooter from "./components/AppFooter.vue";
-import AppSkillSwiper from "./components/AppSkillSwiper.vue";
-import AppOperations from "./components/AppOperations.vue";
-import AppFaq from "./components/AppFaq.vue";
-import AppPopUp from "./components/AppPopUp.vue";
-import AppContact from "./components/AppContact.vue";
-import AppDiferential from "./components/AppDiferential.vue";
-import AppWhatsapp from "./components/AppWhatsapp.vue";
+import AppFooter from "./components/Layout/AppFooter.vue";
+import AppSkillSwiper from "./components/section/AppSkillSwiper.vue";
+import AppOperations from "./components/section/AppOperations.vue";
+import AppFaq from "./components/section/AppFaq.vue";
+import AppPopUp from "./components/modals/AppPopUp.vue";
+import AppContact from "./components/section/AppContact.vue";
+import AppDiferential from "./components/section/AppDiferential.vue";
+import AppWhatsapp from "./components/modals/AppWhatsapp.vue";
 
 export default {
   name: "App",
@@ -251,11 +251,6 @@ export default {
     align-items: center
     min-height: 55vh
 
-
-
-
-
-
   .social
     position: relative
     display: block
@@ -295,14 +290,6 @@ export default {
       @media screen and (max-width:854px)
         left: 2rem
         top: 2rem
-
-
-
-
-
-
-
-
 
     @media screen and (max-width:854px)
         width: 100%
@@ -400,10 +387,6 @@ export default {
         height: 100%
         display: table
         padding: 1.5rem 1rem
-
-
-
-
 
 
       &:hover

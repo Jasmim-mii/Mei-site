@@ -55,9 +55,9 @@ export default createStore({
       work: [  
         {
           id: 1,
-          img: "marketing.png",
-          img2: "marketing2.png",
-          img3: "marketing3.png",
+          img: "marketing/marketing.png",
+          img2: "marketing/marketing2.png",
+          img3: "marketing/marketing3.png",
           categoria: "website",
           showCard: "",
           description: "Page Captura simples, com foco em vende cursos de marketing online do nivel basico ao avançado além disso o projeto traz  elegancia,  simplicidade e obetividade. Aprendizado: Nesse projeto foi utilizado slot, componentes entre outros",
@@ -70,9 +70,9 @@ export default createStore({
         },
         {
           id: 2,
-          img: "docevinho1.png",
-          img2: "docevinho2.png",
-          img3: "docevinho3.png",
+          img: "vinho/docevinho1.png",
+          img2: "vinho/docevinho2.png",
+          img3: "vinho/docevinho3.png",
           categoria: "website",
           showCard: "",
           description: "Explore a nossa seleção exclusiva de vinhos premiados na Doce Vinhos. Cada garrafa é uma obra-prima, cuidadosamente elaborada para oferecer uma experiência de degustação incomparável. Desde vinhos tintos encorpados até brancos refrescantes, nossa coleção atende aos paladares mais exigentes.",
@@ -84,9 +84,9 @@ export default createStore({
       
         {
           id: 3,
-          img: "dentalcare.png",
-          img2: "dentalcare2.png",
-          img3: "dentalcare3.png",
+          img: "odonto/dentalcare.png",
+          img2: "odonto/dentalcare2.png",
+          img3: "odonto/dentalcare3.png",
           categoria: "website",
           showCard: "",
           description: "Lading Page, projeto criado para um consultorio dentario, buscando sempre o foco de levar a informação para o cliente de forma objetiva.",
@@ -102,9 +102,9 @@ export default createStore({
 
         {
           id: 4,
-          img: "webDesigner_frente.png",
-          img2: "webDesigner.png",
-          img3: "webDesigner_full.png",
+          img: "webdesigner/webDesigner_frente.png",
+          img2: "webdesigner/webDesigner.png",
+          img3: "webdesigner/webDesigner_full.png",
           categoria: "IU Designer",
           showCard: "",
           description: "Com uma abordagem criativa e orientada para resultados, oferecemos soluções personalizadas em design web que capturam a essência da sua marca e encantam seus visitantes. Seja para um site impressionante, uma loja online ou uma reformulação visual, nós entregamos projetos que não apenas se destacam, mas também geram resultados ",
@@ -117,9 +117,9 @@ export default createStore({
         },
         {
           id: 5,
-          img: "cosmetic_frente.png",
-          img2: "cosmetic.png",
-          img3: "cosmetic_full.png",
+          img: "cosmetic/cosmetic_frente.png",
+          img2: "cosmetic/cosmetic.png",
+          img3: "cosmetic/cosmetic_full.png",
           categoria: "IU Designer",
           showCard: "",
           description: "Na Cosmetic, somos especialistas em desenvolvimento e terceirização de cosméticos de alta qualidade. Colaboramos com marcas para criar produtos inovadores e eficazes, desde fórmulas exclusivas até embalagens elegantes. Nossa equipe de especialistas garante que cada produto atenda aos mais altos padrões de qualidade e segurança.  ",
@@ -132,9 +132,9 @@ export default createStore({
         },
         {
           id: 6,
-          img: "ase_frente.png",
-          img2: "ase.png",
-          img3: "ase_full.png",
+          img: "ase/ase_frente.png",
+          img2: "ase/ase.png",
+          img3: "ase/ase_full.png",
           categoria: "IU Designer",
           showCard: "",
           description: "Descubra a essência da tradição e exclusividade com a Império Nossa marca oferecendo produtos e experiências que capturam a verdadeira essência da cultura. Desde itens sofisticados até ofertas especiais, garantimos qualidade e um toque de originalidade em cada detalhe.",

@@ -9,7 +9,7 @@
         <div class="icon-differential">
           <img
             class="img-fluid"
-            :src="require(`../assets/differential/${differentials.img}`)"
+            :src="require(`@/assets/differential/${differentials.img}`)"
           />
         </div>
         <div class="decription-differential">
@@ -35,8 +35,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "../sass/_mixin"
-@import "../sass/_variavel"
+@import "@/sass/_mixin"
+@import "@/sass/_variavel"
 
 .container-differential
     display: grid

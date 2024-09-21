@@ -2,7 +2,7 @@
   <section id="footer">
     <div id="grid-footer">
       <div id="logo">
-        <img src="../assets/logo.png" alt="" />
+        <img src="@/assets/logo/logo.png" alt="" />
         <h3 class="logo">
           <a href="#">LLOUD <span>TECH</span></a>
         </h3>
@@ -12,40 +12,48 @@
       <div class="info-footer">
         <a class="title-footer" href="">Serviços</a>
         <div class="list-footer-global">
-          <li><a class="footer-a" href="#services">Desenvolvimento de software</a></li>
-          <li><a class="footer-a" href="#services">Desenvolvimento web</a></li>
-          <li><a class="footer-a" href="#services">Desenvolvimento mobile</a></li>
+          <ul>
+            <li><a class="footer-a" href="#services">Desenvolvimento de software</a></li>
+            <li><a class="footer-a" href="#services">Desenvolvimento web</a></li>
+            <li><a class="footer-a" href="#services">Desenvolvimento mobile</a></li>
+          </ul>
         </div>
       </div>
       <div class="info-footer">
         <a class="title-footer" href="">Menu</a>
         <div class="list-footer-global">
-          <li><a class="footer-a" href="#home">Inicio</a></li>
-          <li><a class="footer-a" href="#services">Serviços</a></li>
-          <li><a class="footer-a" href="#project">Projetos</a></li>
-          <li>
-            <a class="footer-a" href="#step-by-step">Passo a passo</a>
-          </li>
+          <ul>
+            <li><a class="footer-a" href="#home">Inicio</a></li>
+            <li><a class="footer-a" href="#services">Serviços</a></li>
+            <li><a class="footer-a" href="#project">Projetos</a></li>
+            <li>
+              <a class="footer-a" href="#step-by-step">Passo a passo</a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="info-footer">
         <a class="title-footer" href="">Contato</a>
         <div class="list-footer-global">
-          <li class="footer-list">
-            <Icon class="icon" icon="oui:email" /><a class="footer-a" href=""
-              >lloudtech@gmail.com</a
-            >
-          </li>
-          <li class="footer-list">
-            <Icon class="icon" icon="mingcute:map-pin-line" /><a class="footer-a" href=""
-              >Rua mario de araujo - Nilópolis</a
-            >
-          </li>
-          <li class="footer-list">
-            <Icon class="icon" icon="ph:instagram-logo" /><a class="footer-a" href=""
-              >Instagram</a
-            >
-          </li>
+          <ul>
+            <li class="footer-list">
+              <Icon class="icon" icon="oui:email" /><a class="footer-a" href=""
+                >lloudtech@gmail.com</a
+              >
+            </li>
+            <li class="footer-list">
+              <Icon class="icon" icon="mingcute:map-pin-line" /><a
+                class="footer-a"
+                href=""
+                >Rua mario de araujo - Nilópolis</a
+              >
+            </li>
+            <li class="footer-list">
+              <Icon class="icon" icon="ph:instagram-logo" /><a class="footer-a" href=""
+                >Instagram</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -65,8 +73,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import "../sass/_mixin"
-@import "../sass/_variavel"
+@import "@/sass/_mixin"
+@import "@/sass/_variavel"
 
 .footer-list
   display: flex
