@@ -245,11 +245,10 @@ export default {
   background: $background-primary
   padding: 0 0 0 3.5rem
   @media screen and (max-width:854px)
-    padding: 0 3.5rem 0 3.5rem
     text-align: center
     display: flex
     align-items: center
-    min-height: 55vh
+    min-height: 30vh
 
   .social
     position: relative
@@ -318,17 +317,14 @@ export default {
 
 
   .image-bg
-
     height: 100%
     width: 40rem
     text-align: center
     z-index: 0
 
-    @media screen and (max-width:854px)
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
+    @media screen and (max-width:654px)
+      display: none
+
 
 
 

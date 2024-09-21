@@ -80,6 +80,9 @@ export default {
     img
       height: 2.5rem
       width: 3rem
+      @media screen and (max-width:854px)
+        height: 2rem
+        width: 2.5rem
 
 
     h3
